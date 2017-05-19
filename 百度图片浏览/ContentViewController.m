@@ -39,7 +39,7 @@
 {
     if (!_segmentView) {
         __weak typeof(self)weakSelf = self;
-        _segmentView = [[SegmentView alloc] initWithItems:@[@"美女",@"植物",@"明星",@"宠物"] segmentClick:^(NSInteger index) {
+        _segmentView = [[SegmentView alloc] initWithItems:@[@"美女",@"植物",@"明星",@"内涵"] segmentClick:^(NSInteger index) {
             __strong typeof(weakSelf)strongSelf = weakSelf;
             [strongSelf.scrollView setContentOffset:CGPointMake([UIScreen mainScreen].bounds.size.width * index, 0)];
         }];

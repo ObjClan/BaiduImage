@@ -6,6 +6,7 @@
 //  Copyright © 2017年 Access. All rights reserved.
 //
 
+
 #import "BaseViewModel.h"
 #import <AFNetworking/AFNetworking.h>
 
@@ -18,6 +19,7 @@
     }
     return _dataArray;
 }
+
 -(void)getDataWithLimit:(NSInteger)limit offset:(NSInteger)offset title:(NSString *)title success:(void(^)())success failure:(void(^)())failure
 {
     
@@ -31,6 +33,7 @@
     
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:urlStr]];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
+    
     
     [manager GET:@"" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
    

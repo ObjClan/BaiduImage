@@ -6,8 +6,8 @@
 //  Copyright © 2017年 Access. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseTableView.h"
 
-@interface TableView3 : UITableView
+@interface TableView3 : BaseTableView
 
 @end

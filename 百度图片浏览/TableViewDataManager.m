@@ -40,7 +40,7 @@
     __block UIImageView *imageView = [cell.contentView viewWithTag:1];
     imageView.frame = CGRectMake(10, 10, [UIScreen mainScreen].bounds.size.width - 20, 200);
     if (self.dataArray.count > 0) {
-        [imageView sd_setImageWithURL:self.dataArray[indexPath.row][@"image_url"] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        [imageView sd_setImageWithURL:self.dataArray[indexPath.row][@"image_url"] placeholderImage:[UIImage imageNamed:@"default.png"] options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
             
         } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
             imageView.image = image;
